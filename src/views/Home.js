@@ -6,24 +6,16 @@ import Col from 'react-bootstrap/Col';
 
 
 const useStyles = createUseStyles({
-  myNav: {
-    display: "flex",
-    justifyContent: "center",
-    minHeight: "11vh",
-    border: 'solid green',
-  },
-  subNav: {
-    justifyContent: "space-around",
-    maxHeight: "3vh",
-    flexWrap: 'unset',
-    border: 'solid red',
+  myContainer: {
+    border: 'solid'
   },
 });
 
 const Home = () => {
+  const classes = useStyles()
   return (
     <div>
-      <Container>
+      <Container className={classes.myContainer}>
         <Row>
           <Col>1 of 1</Col>
         </Row>
