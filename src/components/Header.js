@@ -8,6 +8,14 @@ const useStyles = createUseStyles({
   myNav: {
     display: "flex",
     justifyContent: "center",
+    minHeight: "11vh",
+    border: 'solid green',
+  },
+  subNav: {
+    justifyContent: "space-around",
+    maxHeight: "3vh",
+    flexWrap: 'unset',
+    border: 'solid red',
   },
 });
 const Header = () => {
@@ -20,15 +28,17 @@ const Header = () => {
         </Navbar.Brand>
       </Navbar>
 
-      <Navbar bg="light" expand="lg">
-          <Nav className="mr-auto">
-            <Nav.Link>
-              <NavLink to="/about">About</NavLink>
-            </Nav.Link>
-            <Nav.Link>
-              <NavLink to="/veracruz">Veracruz</NavLink>
-            </Nav.Link>
-          </Nav>
+      <Navbar bg="light" expand="lg" className={classes.subNav}>
+        <Nav>
+          <Nav.Link>
+            <NavLink to="/about">About</NavLink>
+          </Nav.Link>
+        </Nav>
+        <Nav>
+          <Nav.Link>
+            <NavLink to="/veracruz">Veracruz</NavLink>
+          </Nav.Link>
+        </Nav>
       </Navbar>
     </div>
   );
