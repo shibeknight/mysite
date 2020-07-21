@@ -31,7 +31,7 @@ const Header = () => {
       <Navbar bg="light" expand="lg" className={classes.subNav}>
         <Nav>
           <Nav.Link>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">About us</NavLink>
           </Nav.Link>
         </Nav>
         <Nav>
