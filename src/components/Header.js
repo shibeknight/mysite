@@ -15,17 +15,30 @@ const useStyles = createUseStyles({
     justifyContent: "space-evenly",
     maxHeight: "3vh",
     flexWrap: "unset",
+    paddingBottom: "2vh",
   },
   background: {
     backgroundSize: "cover",
     backgroundPosition: "initial",
+  },
+  links: {
+    fontSize: "x-large",
+    color: "#00994d",
+    textDecoration: "none",
+    "&:hover": {
+      color: "#00994d",
+      textDecoration: "none",
+    },
   },
 });
 const Header = () => {
   const classes = useStyles();
   return (
     <div
-      style={{ backgroundImage: `url(${flowerbg})` }}
+      style={{
+        backgroundImage: `url(${flowerbg})`,
+        boxShadow: "5px 1px 5px 0 rgba(0,0,0,0.2)",
+      }}
       className={classes.background}
       bg="light"
     >
@@ -35,7 +48,8 @@ const Header = () => {
             style={{
               fontFamily: "Pinyon Script, cursive",
               fontSize: "xx-large",
-              color: "#00cc66",
+              color: "#00994d",
+              textDecoration: "none",
             }}
             to="/"
           >
@@ -46,30 +60,14 @@ const Header = () => {
 
       <Navbar expand="lg" className={classes.subNav}>
         <Nav>
-          <Nav.Link>
-            <NavLink
-              style={{
-                fontSize: "large",
-                color: "#00cc66",
-              }}
-              to="/about"
-            >
-              About us
-            </NavLink>
-          </Nav.Link>
+          <NavLink className={classes.links} to="/about">
+            About us
+          </NavLink>
         </Nav>
         <Nav>
-          <Nav.Link>
-            <NavLink
-              style={{
-                fontSize: "large",
-                color: "#00cc66",
-              }}
-              to="/veracruz"
-            >
-              Veracruz
-            </NavLink>
-          </Nav.Link>
+          <NavLink className={classes.links} to="/veracruz">
+            Veracruz
+          </NavLink>
         </Nav>
       </Navbar>
     </div>
