@@ -54,8 +54,8 @@ const Home = () => {
           </Button>
         </Col>
       </Row>
-      <About />
-      <Veracruz />
+      <About id='about'/>
+      <Veracruz id='veracruz'/>
     </Container>
   );
 };

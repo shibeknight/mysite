@@ -1,6 +1,5 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
@@ -31,10 +30,11 @@ const useStyles = createUseStyles({
   },
 });
 
-const Veracruz = () => {
+const Veracruz = ({id}) => {
   const classes = useStyles();
   return (
-    <Container>
+    <div id={id}>
+      <h1 style={{ paddingTop: "2.8vh" }}>Veracruz</h1>
       <Row>
         <Col sm={12} md={6} lg={6} className={classes.myCol}>
           <Carousel>
@@ -74,7 +74,7 @@ const Veracruz = () => {
           </Card>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

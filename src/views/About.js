@@ -40,10 +40,10 @@ const useStyles = createUseStyles({
   },
 });
 
-const About = () => {
+const About = ({id}) => {
   const classes = useStyles();
   return (
-    <>
+    <div id={id}>
     <h1 style={{paddingTop: '2.8vh'}}>About us</h1>
       <Row>
         <Col sm={12} md={6} lg={6} className={classes.myCol}>
@@ -58,7 +58,7 @@ const About = () => {
           <MyCard name="Us" image={both} text={lorem} us />
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

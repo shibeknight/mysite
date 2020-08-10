@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { createUseStyles } from "react-jss";
 import flowerbg from "../assets/89210.jpg";
 
@@ -45,35 +45,39 @@ const useStyles = createUseStyles({
     },
   },
 });
-const Header = () => {
+const Header = (props) => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   const classes = useStyles();
   return (
     <div
       style={{
         backgroundImage: `url(${flowerbg})`,
         boxShadow: "5px 1px 5px 0 rgba(0,0,0,0.2)",
+        position: "sticky",
+        top: 0,
+        zIndex: 2,
       }}
       className={classes.background}
       bg="light"
     >
       <Navbar expand="lg" className={classes.myNav}>
-        <Navbar.Brand>
-          <NavLink className={classes.title} to="/">
-            Silvana y Daniel
-          </NavLink>
+        <Navbar.Brand onClick={scrollToTop} className={classes.title}>
+          Silvana y Daniel
         </Navbar.Brand>
       </Navbar>
 
       <Navbar expand="lg" className={classes.subNav}>
-        <Nav>
-          <NavLink className={classes.links} to="/about">
+        <Nav className={classes.links}>
+          <Link spy={true} smooth={-70} duration={500} to="about">
             About us
-          </NavLink>
+          </Link>
         </Nav>
-        <Nav>
-          <NavLink className={classes.links} to="/veracruz">
+        <Nav className={classes.links}>
+          <Link spy={true} smooth={-70} duration={500} to="veracruz">
             Veracruz
-          </NavLink>
+          </Link>
         </Nav>
       </Navbar>
     </div>
