@@ -33,7 +33,7 @@ const useStyles = createUseStyles({
   title: {
     fontFamily: "Pinyon Script, cursive",
     fontSize: "3em",
-    color: "#004d00",
+    color: "#004d00 !important",
     textDecoration: "none",
   },
   "@media (max-width: 727px)": {
@@ -70,12 +70,18 @@ const Header = (props) => {
 
       <Navbar expand="lg" className={classes.subNav}>
         <Nav className={classes.links}>
-          <Link spy={true} smooth={-70} duration={500} to="about">
+          <Link spy={true} smooth={true} offset={-110} duration={600} to="about">
             About us
           </Link>
         </Nav>
         <Nav className={classes.links}>
-          <Link spy={true} smooth={-70} duration={500} to="veracruz">
+          <Link
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={600}
+            to="veracruz"
+          >
             Veracruz
           </Link>
         </Nav>

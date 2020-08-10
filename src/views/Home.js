@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
     paddingTop: "5vh",
   },
   myImage: {
-    maxHeight: "66vh",
+    maxHeight: "68vh",
   },
   myButton: {
     maxWidth: "40vw",
