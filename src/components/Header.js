@@ -30,6 +30,20 @@ const useStyles = createUseStyles({
       textDecoration: "none",
     },
   },
+  title: {
+    fontFamily: "Pinyon Script, cursive",
+    fontSize: "3em",
+    color: "#004d00",
+    textDecoration: "none",
+  },
+  "@media (max-width: 727px)": {
+    title: {
+      fontSize: "1.2em",
+    },
+    links: {
+      fontSize: "1.1em",
+    },
+  },
 });
 const Header = () => {
   const classes = useStyles();
@@ -44,15 +58,7 @@ const Header = () => {
     >
       <Navbar expand="lg" className={classes.myNav}>
         <Navbar.Brand>
-          <NavLink
-            style={{
-              fontFamily: "Pinyon Script, cursive",
-              fontSize: "3em",
-              color: '#004d00',
-              textDecoration: "none",
-            }}
-            to="/"
-          >
+          <NavLink className={classes.title} to="/">
             Silvana y Daniel
           </NavLink>
         </Navbar.Brand>

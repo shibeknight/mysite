@@ -6,6 +6,8 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import invitacion from '../assets/invitacion.jpg'
+import About from "./About";
+import Veracruz from './Veracruz';
 
 const useStyles = createUseStyles({
   myCol: {
@@ -14,10 +16,15 @@ const useStyles = createUseStyles({
     paddingTop: "5vh",
   },
   myImage: {
-    maxHeight: "60vh",
+    maxHeight: "66vh",
   },
   myButton: {
     maxWidth: "40vw",
+  },
+  "@media (max-width: 727px)": {
+    myImage: {
+      height: "65vh",
+    }
   },
 });
 
@@ -47,6 +54,8 @@ const Home = () => {
           </Button>
         </Col>
       </Row>
+      <About />
+      <Veracruz />
     </Container>
   );
 };

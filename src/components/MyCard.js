@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 
 const useStyles = createUseStyles({
   cardImage: {
-    maxHeight: "50vh",
+    maxHeight: "66vh",
   },
   myCard: {
     boxShadow: "5px 4px 8px 0 rgba(0,0,0,0.2)",
@@ -30,17 +30,13 @@ const useStyles = createUseStyles({
 const MyCard = (props) => {
   const classes = useStyles();
   return (
-      <Card className={props.us ? classes.usCard : classes.myCard} fluid>
-        <Card.Img
-          className={classes.cardImage}
-          variant="top"
-          src={props.image}
-        />
-        <Card.Body>
-          <Card.Title>{props.name}</Card.Title>
-          <Card.Text>{props.text}</Card.Text>
-        </Card.Body>
-      </Card> 
+    <Card className={props.us ? classes.usCard : classes.myCard} fluid>
+      <Card.Img className={classes.cardImage} variant="top" src={props.image} />
+      <Card.Body>
+        <Card.Title style={{ fontWeight: "bold" }}>{props.name}</Card.Title>
+        <Card.Text>{props.text}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 

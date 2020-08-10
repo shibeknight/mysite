@@ -43,7 +43,8 @@ const useStyles = createUseStyles({
 const About = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.myContainer}>
+    <>
+    <h1 style={{paddingTop: '2.8vh'}}>About us</h1>
       <Row>
         <Col sm={12} md={6} lg={6} className={classes.myCol}>
           <MyCard name="Silvana" image={silvana} text={lorem} />
@@ -57,7 +58,7 @@ const About = () => {
           <MyCard name="Us" image={both} text={lorem} us />
         </Col>
       </Row>
-    </Container>
+    </>
   );
 };
 
