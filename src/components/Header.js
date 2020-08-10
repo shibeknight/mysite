@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
 import { createUseStyles } from "react-jss";
-import flowerbg from "../assets/17703.jpg";
+import flowerbg from "../assets/89210.jpg";
 
 const useStyles = createUseStyles({
   myNav: {
@@ -47,8 +47,8 @@ const Header = () => {
           <NavLink
             style={{
               fontFamily: "Pinyon Script, cursive",
-              fontSize: "xx-large",
-              color: "#00994d",
+              fontSize: "3em",
+              color: '#004d00',
               textDecoration: "none",
             }}
             to="/"
