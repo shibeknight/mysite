@@ -5,9 +5,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
-import invitacion from '../assets/invitacion.jpg'
-import About from "./About";
-import Veracruz from './Veracruz';
+import invitacion from "../assets/invitacion.jpg";
+import hero from "../assets/heropic.jpeg";
+// import About from "./About";
+// import Veracruz from './Veracruz';
 
 const useStyles = createUseStyles({
   myCol: {
@@ -24,25 +25,45 @@ const useStyles = createUseStyles({
   "@media (max-width: 727px)": {
     myImage: {
       height: "65vh",
-    }
+    },
+  },
+  myHero: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero})`,
+    /* Set a specific height */
+    /* Position and center the image to scale nicely on all screens */
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    position: "relative",
+    height: "600px",
+    width: "100%"
+  },
+  myHeroText: {
+    textAlign: "center",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: `translate(-50%, -50%)`,
+    color: "white",
   },
 });
 
 const Home = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.myContainer}>
+    <Container fluid className={classes.myContainer}>
       <Row>
         <Col className={classes.myCol}>
-          <Image
-            className={classes.myImage}
-            src={invitacion}
-            rounded
-            fluid
-          />
+          <div className={classes.myHero}>
+            <div >
+              <h1>I am John Doe</h1>
+              <p>And I'm a Photographer</p>
+              <button>Hire me</button>
+            </div>
+          </div>
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col className={classes.myCol}>
           <Button
             className={classes.myButton}
@@ -53,9 +74,9 @@ const Home = () => {
             Confirmar asistencia
           </Button>
         </Col>
-      </Row>
-      <About id='about'/>
-      <Veracruz id='veracruz'/>
+      </Row> */}
+      {/* <About id='about'/>
+      <Veracruz id='veracruz'/> */}
     </Container>
   );
 };
