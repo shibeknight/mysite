@@ -3,9 +3,6 @@ import { createUseStyles } from "react-jss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import silvana from "../assets/silvana.jpg";
-import daniel from "../assets/daniel.jpg";
-import both from "../assets/both.jpg";
 import MyCard from "../components/MyCard";
 
 const lorem =
@@ -45,7 +42,7 @@ const About = ({id}) => {
   return (
     <div id={id}>
     <h1 style={{paddingTop: '2.8vh'}}>About us</h1>
-      <Row>
+      {/* <Row>
         <Col sm={12} md={6} lg={6} className={classes.myCol}>
           <MyCard name="Silvana" image={silvana} text={lorem} />
         </Col>
@@ -57,7 +54,7 @@ const About = ({id}) => {
         <Col sm={12} md={12} lg={12} className={classes.myCol}>
           <MyCard name="Us" image={both} text={lorem} us />
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 };

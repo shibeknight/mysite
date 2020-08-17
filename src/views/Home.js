@@ -1,50 +1,25 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Container from "react-bootstrap/Container";
+import Hero from "../components/Hero";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
-import invitacion from "../assets/invitacion.jpg";
-import hero from "../assets/heropic.jpeg";
-// import About from "./About";
-// import Veracruz from './Veracruz';
+import CardBasic from "../components/CardBasic";
+import sil from "../assets/sil.jpeg";
+import sildan2 from "../assets/sildan2.jpeg";
+import sildan3 from "../assets/sildan3.jpeg";
+
+const lorem =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dui et facilisis porttitor. Morbi ultrices diam vitae libero aliquet, ac luctus ante egestas. Maecenas finibus luctus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac mauris eleifend, semper libero quis, vehicula nibh. Nullam fermentum nisi eu neque placerat, sed euismod elit faucibus. Etiam placerat finibus vehicula. Duis a ex at nisl consequat dapibus quis at ligula.";
 
 const useStyles = createUseStyles({
+  myContainer: {
+    padding: "0",
+    margin: "0",
+  },
   myCol: {
     display: "flex",
     justifyContent: "center",
-    paddingTop: "5vh",
-  },
-  myImage: {
-    maxHeight: "68vh",
-  },
-  myButton: {
-    maxWidth: "40vw",
-  },
-  "@media (max-width: 727px)": {
-    myImage: {
-      height: "65vh",
-    },
-  },
-  myHero: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero})`,
-    /* Set a specific height */
-    /* Position and center the image to scale nicely on all screens */
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    position: "relative",
-    height: "600px",
-    width: "100%"
-  },
-  myHeroText: {
-    textAlign: "center",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: `translate(-50%, -50%)`,
-    color: "white",
   },
 });
 
@@ -52,31 +27,38 @@ const Home = () => {
   const classes = useStyles();
   return (
     <Container fluid className={classes.myContainer}>
-      <Row>
-        <Col className={classes.myCol}>
-          <div className={classes.myHero}>
-            <div >
-              <h1>I am John Doe</h1>
-              <p>And I'm a Photographer</p>
-              <button>Hire me</button>
-            </div>
-          </div>
+      <Hero />
+      <Row
+        style={{
+          paddingTop: "4vh",
+          paddingRight: "20px",
+          paddingLeft: "20px",
+          marginRight: "auto",
+          marginLeft: "auto",
+        }}
+      >
+        <Col
+          style={{ paddingBottom: "3vh" }}
+          className={classes.myCol}
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <h1 style={{ textAlign: "center" }}>
+            Please join Silvana and Daniel as we celebrate our wedding in
+            Mexico!
+          </h1>
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <CardBasic image={sil} title="Silvana" text={lorem} />
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <CardBasic image={sildan3} title="Daniel" text={lorem} />
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <CardBasic image={sildan2} title="Us" text={lorem} />
         </Col>
       </Row>
-      {/* <Row>
-        <Col className={classes.myCol}>
-          <Button
-            className={classes.myButton}
-            size="lg"
-            block
-            style={{backgroundColor: 'rgb(101 138 63 / 81%)', border: 'none'}}
-          >
-            Confirmar asistencia
-          </Button>
-        </Col>
-      </Row> */}
-      {/* <About id='about'/>
-      <Veracruz id='veracruz'/> */}
     </Container>
   );
 };
