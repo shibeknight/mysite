@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
 // import { Link, animateScroll as scroll } from "react-scroll";
 import { createUseStyles } from "react-jss";
 import flowerbg from "../assets/89210.jpg";
@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     maxHeight: "3vh",
     flexWrap: "unset",
     paddingBottom: "2vh",
-    alignItems: 'normal', 
+    alignItems: "normal",
   },
   background: {
     backgroundSize: "cover",
@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
   links: {
     fontSize: "x-large",
     color: "#00994d",
-    padding: '10px',
+    padding: "10px",
     textDecoration: "none",
     "&:hover": {
       color: "#00994d",
@@ -55,7 +55,7 @@ const Header = (props) => {
         position: "sticky",
         top: 0,
         zIndex: 2,
-        height: '7vh'
+        height: "7vh",
       }}
       className={classes.background}
       bg="light"
@@ -67,10 +67,8 @@ const Header = (props) => {
       </Navbar> */}
 
       <Navbar expand="lg" className={classes.subNav}>
-        <Nav className={classes.links}>
-          Home
-        </Nav>
-        <Nav className={classes.links}>
+        <NavLink to='/' className={classes.links}>Home</NavLink>
+        <NavLink to='/location' className={classes.links}>
           {/* <Link
             spy={true}
             smooth={true}
@@ -81,10 +79,8 @@ const Header = (props) => {
             Veracruz
           </Link> */}
           Location
-        </Nav>
-        <Nav className={classes.links}>
-          Gifts
-        </Nav>
+        </NavLink>
+        <NavLink to='/gifts' className={classes.links}>Gifts</NavLink>
       </Navbar>
     </div>
   );

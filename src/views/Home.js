@@ -9,7 +9,7 @@ import sil3 from "../assets/sil3.jpg";
 import dan2 from "../assets/dan2.jpg";
 import sildan5 from "../assets/sildan5.jpg";
 import hero from "../assets/heropic.jpeg";
-import hero2 from "../assets/heropic2.jpeg";
+import hero4 from "../assets/heropic4.jpeg";
 import hero3 from "../assets/heropic3.jpeg";
 
 const lorem =
@@ -85,7 +85,7 @@ const Home = () => {
           </div>
         </Col>
       </Row>
-      <Hero title="Wedding Day" height="70vh" image={hero2} />
+      <Hero title="Wedding Day" height="70vh" image={hero4} />
       <Row className={classes.myRow}>
         <Col className={classes.myCol} xs={12} md={6} lg={6}>
           <CardBasic align={true} title="Ceremony" text={lorem} />

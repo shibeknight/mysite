@@ -9,8 +9,8 @@ function App() {
   return (
     <Layout>
       <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/veracruz" component={Veracruz} />
+        <Route path="/gifts" component={About} />
+        <Route path="/location" component={Veracruz} />
         <Route path="/" component={Home} />
       </Switch>
     </Layout>

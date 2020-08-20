@@ -2,79 +2,61 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
-import Carousel from "react-bootstrap/Carousel";
+import Container from "react-bootstrap/Container";
+import Hero from "../components/Hero";
+import CardBasic from "../components/CardBasic";
+import veracruz from "../assets/veracruz/9.JPG";
+import mapa from "../assets/veracruz/veracruzmapa.png";
+
+const lorem =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dui et facilisis porttitor. Morbi ultrices diam vitae libero aliquet, ac luctus ante egestas. Maecenas finibus luctus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac mauris eleifend, semper libero quis, vehicula nibh. Nullam fermentum nisi eu neque placerat, sed euismod elit faucibus. Etiam placerat finibus vehicula. Duis a ex at nisl consequat dapibus quis at ligula.";
 
 const useStyles = createUseStyles({
   myContainer: {
-    border: "solid",
+    padding: "0",
+    margin: "0",
+    backgroundColor: "#f7f1f0",
   },
   myCol: {
     display: "flex",
     justifyContent: "center",
-    padding: "5vh",
-    border: "solid",
   },
-  myImage: {
-    maxHeight: "60vh",
-  },
-  myButton: {
-    maxWidth: "40vw",
-  },
-  myCard: {
-    boxShadow: "5px 4px 8px 0 rgba(0,0,0,0.2)",
-    transition: "0.3s",
-    "&:hover": {
-      boxShadow: "10px 8px 16px 0 rgba(0,0,0,0.2)",
-    },
+  myRow: {
+    paddingTop: "4.2vh",
+    paddingRight: "20px",
+    paddingLeft: "20px",
+    marginRight: "auto",
+    marginLeft: "auto",
   },
 });
 
-const Veracruz = ({id}) => {
+const Veracruz = () => {
   const classes = useStyles();
   return (
-    <div id={id}>
-      <h1 style={{ paddingTop: "2.8vh" }}>Veracruz</h1>
-      <Row>
-        <Col sm={12} md={6} lg={6} className={classes.myCol}>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="http://wiki.ifmsa.org/scope/images/e/e9/Mapa_Veracruz.jpg"
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="http://conchaytoro.com/content/uploads/2019/01/Puerto-de-Veracruz-CC-Eduardo-Pavon.jpg"
-                alt="Third slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="http://beserentacar.com/wp-content/uploads/2017/10/Los-10-lugares-imperdibles-en-Veracruz-BESE.jpg"
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel>
+    <Container fluid className={classes.myContainer}>
+      <Hero image={veracruz} title="Veracruz" />
+      <Row className={classes.myRow}>
+        <Col
+          style={{ paddingBottom: "3vh" }}
+          className={classes.myCol}
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <div style={{ textAlign: "center" }}>
+            <h1>Directions</h1>
+            <p>Direcciones para llegar a Veracruz</p>
+            <img alt="mapa" src={mapa} />
+          </div>
         </Col>
-        <Col sm={12} md={6} lg={6} className={classes.myCol}>
-          <Card className={classes.myCard} fluid>
-            <Card.Header as="h5">Featured</Card.Header>
-            <Card.Body>
-              <Card.Title>Special title treatment</Card.Title>
-              <Card.Text>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <Col className={classes.myCol} xs={12} md={6} lg={6}>
+          <CardBasic align={true} title="Ceremony" text={lorem} />
+        </Col>
+        <Col className={classes.myCol} xs={12} md={6} lg={6}>
+          <CardBasic align={true} title="Ceremony" text={lorem} />
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 
