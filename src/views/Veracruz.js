@@ -6,6 +6,11 @@ import Container from "react-bootstrap/Container";
 import Hero from "../components/Hero";
 import CardBasic from "../components/CardBasic";
 import veracruz from "../assets/veracruz/9.JPG";
+import ver1 from '../assets/veracruz/10.jpg';
+import ver2 from '../assets/veracruz/2.jpg';
+import ver3 from '../assets/veracruz/11.jpg';
+import hotel from "../assets/veracruz/hotel.jpg";
+import hotel2 from "../assets/veracruz/hotel2.jpg";
 import mapa from "../assets/veracruz/veracruzmapa.png";
 
 const lorem =
@@ -54,6 +59,52 @@ const Veracruz = () => {
         </Col>
         <Col className={classes.myCol} xs={12} md={6} lg={6}>
           <CardBasic align={true} title="Ceremony" text={lorem} />
+        </Col>
+      </Row>
+      <Hero image={hotel} title="Where to stay" height="60vh" />
+      <Row className={classes.myRow}>
+        <Col
+          style={{ paddingBottom: "3vh" }}
+          className={classes.myCol}
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <div style={{ textAlign: "center" }}>
+            <h2>
+              We provide a special price for wedding guests at the Grand Fiesta Americana Veracruz
+            </h2>
+            <p>Link/codigo de descuento</p>
+          </div>
+        </Col>
+        <Col className={classes.myCol} xs={12} md={6} lg={6}>
+          <CardBasic align={true} title="Hotel Info" text={lorem} />
+        </Col>
+        <Col className={classes.myCol} xs={12} md={6} lg={6}>
+          <CardBasic align={true} title="Hotel Directions" text={lorem} />
+        </Col>
+      </Row>
+      <Hero image={hotel2} title="What to do" height="60vh" />
+      <Row className={classes.myRow}>
+        <Col
+          style={{ paddingBottom: "3vh" }}
+          className={classes.myCol}
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <h2 style={{ textAlign: "center" }}>
+            You'll find plenty of activities and amazing food to try in Veracruz!
+          </h2>
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <CardBasic image={ver1} title="Visit" text={lorem} />
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <CardBasic image={ver2} title="Explore" text={lorem} />
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <CardBasic image={ver3} title="Enjoy" text={lorem} />
         </Col>
       </Row>
     </Container>
