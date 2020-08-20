@@ -13,6 +13,9 @@ const Footer = () => {
         fontSize: "large",
         fontWeight: "bold",
         color: "rgb(69, 95, 75)",
+        width: '100%',
+        marginLeft: '0',
+        marginRight: '0'
       }}
     >
       Created by me
