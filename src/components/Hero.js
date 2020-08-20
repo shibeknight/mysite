@@ -20,6 +20,17 @@ const useStyles = createUseStyles({
   myHeroText: {
     color: "#d3d0ad",
   },
+  myTitle: {
+    textAlign: "center",
+    fontSize: "4rem",
+    fontFamily: "Pinyon Script, cursive",
+  },
+  "@media (max-width: 727px)": {
+    myTitle: {
+      fontSize: "3em",
+    },
+    
+  },
 });
 
 const Hero = (props) => {
@@ -27,9 +38,7 @@ const Hero = (props) => {
   return (
     <div className={classes.myHero}>
       <div className={classes.myHeroText}>
-        <h1 style={{ textAlign: "center", fontSize: "xxx-large" }}>
-          Silvana y Daniel
-        </h1>
+        <h1 className={classes.myTitle}>Silvana y Daniel</h1>
         <h3 style={{ opacity: "0.6", textAlign: "center" }}>
           November 28, 2020 - Veracruz, Mexico
         </h3>

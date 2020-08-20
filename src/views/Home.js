@@ -16,6 +16,7 @@ const useStyles = createUseStyles({
   myContainer: {
     padding: "0",
     margin: "0",
+    backgroundColor: '#f7f1f0',
   },
   myCol: {
     display: "flex",

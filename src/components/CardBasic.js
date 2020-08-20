@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 const CardBasic = (props) => {
   return (
-    <Card border="light">
+    <Card border="light" style={{color: '#455f4b', marginBottom: '3vh', backgroundColor: 'transparent', border:'none', fontSize: '1.1rem'}}>
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
         <Card.Title style={{ fontSize: "2rem" }}>{props.title}</Card.Title>

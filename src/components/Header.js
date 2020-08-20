@@ -1,21 +1,17 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 import { createUseStyles } from "react-jss";
 import flowerbg from "../assets/89210.jpg";
 
 const useStyles = createUseStyles({
-  myNav: {
-    display: "flex",
-    justifyContent: "center",
-    minHeight: "11vh",
-  },
   subNav: {
-    justifyContent: "space-evenly",
+    justifyContent: "flex-end",
     maxHeight: "3vh",
     flexWrap: "unset",
     paddingBottom: "2vh",
+    alignItems: 'normal', 
   },
   background: {
     backgroundSize: "cover",
@@ -24,6 +20,7 @@ const useStyles = createUseStyles({
   links: {
     fontSize: "x-large",
     color: "#00994d",
+    padding: '10px',
     textDecoration: "none",
     "&:hover": {
       color: "#00994d",
@@ -46,9 +43,9 @@ const useStyles = createUseStyles({
   },
 });
 const Header = (props) => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
   const classes = useStyles();
   return (
     <div
@@ -58,24 +55,23 @@ const Header = (props) => {
         position: "sticky",
         top: 0,
         zIndex: 2,
+        height: '7vh'
       }}
       className={classes.background}
       bg="light"
     >
-      <Navbar expand="lg" className={classes.myNav}>
+      {/* <Navbar expand="lg" className={classes.myNav}>
         <Navbar.Brand onClick={scrollToTop} className={classes.title}>
           Silvana y Daniel
         </Navbar.Brand>
-      </Navbar>
+      </Navbar> */}
 
       <Navbar expand="lg" className={classes.subNav}>
         <Nav className={classes.links}>
-          <Link spy={true} smooth={true} offset={-110} duration={600} to="about">
-            About us
-          </Link>
+          Home
         </Nav>
         <Nav className={classes.links}>
-          <Link
+          {/* <Link
             spy={true}
             smooth={true}
             offset={-70}
@@ -83,7 +79,11 @@ const Header = (props) => {
             to="veracruz"
           >
             Veracruz
-          </Link>
+          </Link> */}
+          Location
+        </Nav>
+        <Nav className={classes.links}>
+          Gifts
         </Nav>
       </Navbar>
     </div>
