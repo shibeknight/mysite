@@ -46,12 +46,12 @@ const Gifts = () => {
           md={8}
           lg={8}
         >
-          <h1 style={{ textAlign: "center" }}>
+          <h2 style={{ textAlign: "center" }}>
             You don't have to bring us gifts, our home is now far from Veracruz
             and we can't take much with us. If you want to give us something, a
             contribution to our honeymoon fund and future plans as a family
             would be great!
-          </h1>
+          </h2>
         </Col>
       </Row>
     </Container>

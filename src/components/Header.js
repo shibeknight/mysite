@@ -10,8 +10,6 @@ const useStyles = createUseStyles({
     justifyContent: "flex-end",
     maxHeight: "3vh",
     flexWrap: "unset",
-    paddingBottom: "2vh",
-    alignItems: "normal",
   },
   background: {
     backgroundSize: "cover",
@@ -20,7 +18,7 @@ const useStyles = createUseStyles({
   links: {
     fontSize: "x-large",
     color: "#00994d",
-    padding: "10px",
+    margin: "10px",
     textDecoration: "none",
     "&:hover": {
       color: "#00994d",
@@ -56,6 +54,9 @@ const Header = (props) => {
         top: 0,
         zIndex: 2,
         height: "7vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
       className={classes.background}
       bg="light"
@@ -67,8 +68,10 @@ const Header = (props) => {
       </Navbar> */}
 
       <Navbar expand="lg" className={classes.subNav}>
-        <NavLink to='/' className={classes.links}>Home</NavLink>
-        <NavLink to='/location' className={classes.links}>
+        <NavLink to="/" className={classes.links}>
+          Home
+        </NavLink>
+        <NavLink to="/location" className={classes.links}>
           {/* <Link
             spy={true}
             smooth={true}
@@ -80,7 +83,12 @@ const Header = (props) => {
           </Link> */}
           Location
         </NavLink>
-        <NavLink to='/gifts' className={classes.links}>Gifts</NavLink>
+        <NavLink to="/gifts" className={classes.links}>
+          Gifts
+        </NavLink>
+        <NavLink to="/reserve" className={classes.links}>
+          RSVP
+        </NavLink>
       </Navbar>
     </div>
   );
