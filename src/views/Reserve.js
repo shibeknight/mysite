@@ -1,6 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Container from "react-bootstrap/Container";
+
 import Hero from "../components/Hero";
 import RsvpForm from "../components/RsvpForm";
 import heropic from "../assets/heropic6.jpeg";
@@ -25,6 +26,7 @@ const Reserve = () => {
         title="RSVP"
         subtitle="Please respond by October 1, 2020"
       />
+
       <RsvpForm />
     </Container>
   );

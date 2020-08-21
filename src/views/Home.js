@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Hero from "../components/Hero";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ScrollAnimation from "react-animate-on-scroll";
 import CardBasic from "../components/CardBasic";
 import sil3 from "../assets/sil3.jpg";
 import dan2 from "../assets/dan2.jpg";
@@ -31,6 +32,7 @@ const useStyles = createUseStyles({
     paddingLeft: "20px",
     marginRight: "auto",
     marginLeft: "auto",
+    justifyContent: "center",
   },
 });
 
@@ -52,19 +54,39 @@ const Home = () => {
           md={12}
           lg={12}
         >
-          <h1 style={{ textAlign: "center" }}>
-            Please join Silvana and Daniel as we celebrate our wedding in
-            Mexico!
-          </h1>
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <h1 style={{ textAlign: "center" }}>
+              Please join Silvana and Daniel as we celebrate our wedding in
+              Mexico!
+            </h1>
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic image={sil3} title="Silvana" text={lorem} />
+          <ScrollAnimation
+            delay={500}
+            animateIn="slideInRight"
+            animateOnce={true}
+          >
+            <CardBasic image={sil3} title="Silvana" text={lorem} />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic image={dan2} title="Daniel" text={lorem} />
+          <ScrollAnimation
+            delay={1000}
+            animateIn="slideInRight"
+            animateOnce={true}
+          >
+            <CardBasic image={dan2} title="Daniel" text={lorem} />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic image={sildan5} title="Us" text={lorem} />
+          <ScrollAnimation
+            delay={1500}
+            animateIn="slideInRight"
+            animateOnce={true}
+          >
+            <CardBasic image={sildan5} title="Us" text={lorem} />
+          </ScrollAnimation>
         </Col>
       </Row>
       <Hero image={hero3} title="Covid Protocol" height="60vh" />
@@ -77,20 +99,22 @@ const Home = () => {
           lg={12}
         >
           <div style={{ textAlign: "center" }}>
-            <h2>
-              Please read the following document regarding health and safety
-              protocols to be implemented in the venue.
-            </h2>
-            <p>Documento</p>
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+              <h2>
+                Please read the following document regarding health and safety
+                protocols to be implemented in the venue.
+              </h2>
+              <p>Documento</p>
+            </ScrollAnimation>
           </div>
         </Col>
       </Row>
       <Hero title="Wedding Day" height="70vh" image={hero4} />
       <Row className={classes.myRow}>
-        <Col className={classes.myCol} xs={12} md={6} lg={6}>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <CardBasic align={true} title="Ceremony" text={lorem} />
         </Col>
-        <Col className={classes.myCol} xs={12} md={6} lg={6}>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <CardBasic align={true} title="Reception" text={lorem} />
         </Col>
       </Row>

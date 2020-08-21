@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Hero from "../components/Hero";
 import CardBasic from "../components/CardBasic";
+import ScrollAnimation from "react-animate-on-scroll";
 import veracruz from "../assets/veracruz/9.JPG";
 import ver1 from "../assets/veracruz/12.jpg";
 import ver2 from "../assets/veracruz/11.jpg";
@@ -79,13 +80,15 @@ const Veracruz = () => {
           md={12}
           lg={12}
         >
-          <div style={{ textAlign: "center" }}>
-            <h2>
-              We provide a special price for wedding guests at the Grand Fiesta
-              Americana Veracruz
-            </h2>
-            <p>Link/codigo de descuento</p>
-          </div>
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <div style={{ textAlign: "center" }}>
+              <h2>
+                We provide a special price for wedding guests at the Grand
+                Fiesta Americana Veracruz
+              </h2>
+              <p>Link/codigo de descuento</p>
+            </div>
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <CardBasic align={true} title="Hotel Info" text={lorem} />
@@ -109,13 +112,36 @@ const Veracruz = () => {
           </h2>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic image={ver1} title="Visit" text={lorem} />
+          <ScrollAnimation
+            delay={500}
+            animateIn="slideInRight"
+            animateOnce={true}
+          >
+            <CardBasic image={ver1} title="Visit" text={lorem} />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic image={ver2} title="Explore" text={lorem} />
+          <ScrollAnimation
+            delay={1000}
+            animateIn="slideInRight"
+            animateOnce={true}
+          >
+            <CardBasic
+              height="235px"
+              image={ver2}
+              title="Explore"
+              text={lorem}
+            />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic image={ver3} title="Enjoy" text={lorem} />
+          <ScrollAnimation
+            delay={1500}
+            animateIn="slideInRight"
+            animateOnce={true}
+          >
+            <CardBasic height="235px" image={ver3} title="Enjoy" text={lorem} />
+          </ScrollAnimation>
         </Col>
       </Row>
     </Container>

@@ -34,7 +34,7 @@ const MyCard = (props) => {
       <Card.Img className={classes.cardImage} variant="top" src={props.image} />
       <Card.Body>
         <Card.Title style={{ fontWeight: "bold" }}>{props.name}</Card.Title>
-        <Card.Text>{props.text}</Card.Text>
+        <Card.Text style={{ textAlign: "justify" }}>{props.text}</Card.Text>
       </Card.Body>
     </Card>
   );

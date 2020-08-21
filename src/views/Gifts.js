@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Hero from "../components/Hero";
+import ScrollAnimation from "react-animate-on-scroll";
 import heropic from "../assets/heropic5.jpeg";
 
 const useStyles = createUseStyles({
@@ -22,8 +23,8 @@ const useStyles = createUseStyles({
     paddingLeft: "20px",
     marginRight: "auto",
     marginLeft: "auto",
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
   },
 });
 
@@ -39,19 +40,21 @@ const Gifts = () => {
       <Row className={classes.myRow}>
         <Col
           style={{
-            paddingBottom: "3vh"
+            paddingBottom: "3vh",
           }}
           className={classes.myCol}
           xs={8}
           md={8}
           lg={8}
         >
-          <h2 style={{ textAlign: "center" }}>
-            You don't have to bring us gifts, our home is now far from Veracruz
-            and we can't take much with us. If you want to give us something, a
-            contribution to our honeymoon fund and future plans as a family
-            would be great!
-          </h2>
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <h2 style={{ textAlign: "center" }}>
+              You don't have to bring us gifts, our home is now far from
+              Veracruz and we can't take much with us. If you want to give us
+              something, a contribution to our honeymoon fund and future plans
+              as a family would be great!
+            </h2>
+          </ScrollAnimation>
         </Col>
       </Row>
     </Container>

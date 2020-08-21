@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-// import { Link, animateScroll as scroll } from "react-scroll";
 import { createUseStyles } from "react-jss";
 import flowerbg from "../assets/89210.jpg";
 
