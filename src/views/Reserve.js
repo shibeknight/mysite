@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import Container from "react-bootstrap/Container";
 
@@ -19,6 +19,61 @@ const useStyles = createUseStyles({
 
 const Reserve = () => {
   const classes = useStyles();
+  const [info, setinfo] = useState({
+    email: "",
+    fname: "",
+    lname: "",
+    going: "Yes",
+    message: "",
+  });
+  const [loading, setisloading] = useState(false);
+  const [success, setsuccess] = useState(false);
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setinfo({ ...info, [name]: value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const templateId = "template_5NPOxG7q";
+    sendFeedback(templateId, info);
+    console.log("The result is ", info);
+  }
+
+  function sendFeedback(templateId, variables) {
+    console.log(variables);
+    setisloading(true);
+    window.emailjs
+      .send("gmail", templateId, variables)
+      .then((res) => {
+        setisloading(false);
+        setsuccess(true);
+        console.log("Success!", res);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  let section;
+
+  if (loading) {
+    section = <div>Loading...</div>;
+  } else if (success) {
+    section = <div>Success!</div>;
+  } else {
+    section = (
+      <RsvpForm
+        email={info.email}
+        fname={info.fname}
+        lname={info.lname}
+        going={info.going}
+        message={info.message}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+    );
+  }
+
   return (
     <Container fluid className={classes.myContainer}>
       <Hero
@@ -26,8 +81,7 @@ const Reserve = () => {
         title="RSVP"
         subtitle="Please respond by October 1, 2020"
       />
-
-      <RsvpForm />
+      {section}
     </Container>
   );
 };

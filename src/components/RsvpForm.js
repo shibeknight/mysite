@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const RsvpForm = () => {
+const RsvpForm = (props) => {
   const classes = useStyles();
   return (
     <Form>
@@ -35,26 +35,58 @@ const RsvpForm = () => {
         <Row className={classes.myRow}>
           <Col xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
             <Form.Label className={classes.myLabel}>Email address</Form.Label>
-            <Form.Control type="email" placeholder="someone@mail.com" />
+            <Form.Control
+              onChange={props.handleChange}
+              name="email"
+              value={props.email}
+              type="email"
+              placeholder="someone@mail.com"
+            />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6} className={classes.myCol}>
-            <Form.Control type="input" placeholder="First name" />
+            <Form.Control
+              onChange={props.handleChange}
+              name="fname"
+              value={props.fname}
+              type="input"
+              placeholder="First name"
+            />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6} className={classes.myCol}>
-            <Form.Control type="input" placeholder="Last name" />
+            <Form.Control
+              onChange={props.handleChange}
+              name="lname"
+              value={props.lname}
+              type="input"
+              placeholder="Last name"
+            />
           </Col>
           <Col xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
-            <Form.Label className={classes.myLabel}>
+            <Form.Label
+              onChange={props.handleChange}
+              className={classes.myLabel}
+            >
               Will you be there?
             </Form.Label>
-            <Form.Control as="select">
+            <Form.Control
+              onChange={props.handleChange}
+              name="going"
+              value={props.going}
+              as="select"
+            >
               <option>Yes</option>
               <option>No</option>
             </Form.Control>
           </Col>
           <Col xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
             <Form.Label className={classes.myLabel}>Message</Form.Label>
-            <Form.Control as="textarea" rows="3" />
+            <Form.Control
+              onChange={props.handleChange}
+              name="message"
+              value={props.message}
+              as="textarea"
+              rows="3"
+            />
           </Col>
           <Col
             xs={12}
@@ -67,6 +99,7 @@ const RsvpForm = () => {
             <Button
               style={{ fontWeight: "bold", width: "40%" }}
               variant="outline-success"
+              onClick={props.handleSubmit}
             >
               Submit
             </Button>
