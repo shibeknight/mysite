@@ -117,7 +117,13 @@ const Veracruz = () => {
             animateIn="slideInRight"
             animateOnce={true}
           >
-            <CardBasic image={ver1} title="Visit" text={lorem} />
+            <CardBasic
+              height="300px"
+              mheight="200px"
+              image={ver1}
+              title="Visit"
+              text={lorem}
+            />
           </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
@@ -127,7 +133,8 @@ const Veracruz = () => {
             animateOnce={true}
           >
             <CardBasic
-              height="235px"
+              height="300px"
+              mheight="200px"
               image={ver2}
               title="Explore"
               text={lorem}
@@ -140,7 +147,13 @@ const Veracruz = () => {
             animateIn="slideInRight"
             animateOnce={true}
           >
-            <CardBasic height="235px" image={ver3} title="Enjoy" text={lorem} />
+            <CardBasic
+              height="300px"
+              mheight="200px"
+              image={ver3}
+              title="Enjoy"
+              text={lorem}
+            />
           </ScrollAnimation>
         </Col>
       </Row>
