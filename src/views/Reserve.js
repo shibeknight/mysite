@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 import Hero from "../components/Hero";
 import RsvpForm from "../components/RsvpForm";
-import heropic from "../assets/heropic6.jpeg";
+import heropic from "../assets/heropic7.jpeg";
 
 const useStyles = createUseStyles({
   myContainer: {
