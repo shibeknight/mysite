@@ -70,7 +70,7 @@ const Home = () => {
         >
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <h1 style={{ textAlign: "center" }}>
-              ¡Estamos muy felices al celebrar la union de nuestras vidas, Únete
+              ¡Estamos muy felices al celebrar la unión de nuestras vidas, únete
               a nuestra alegría!
             </h1>
           </ScrollAnimation>
@@ -116,7 +116,7 @@ const Home = () => {
           <div style={{ textAlign: "center" }}>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <h1>
-                Nos encantaría verte! Por ello, tenemos las siguientes
+                ¡Nos encantaría verte! Por ello, tenemos las siguientes
                 recomendaciones para ti durante el evento.
               </h1>
             </ScrollAnimation>
@@ -130,7 +130,7 @@ const Home = () => {
               text={
                 <>
                   <h5 style={{ textAlign: "center" }}>
-                    Si haz presentado malestares como:
+                    Si has experimentado malestares como:
                   </h5>
                   <ul
                     style={{
@@ -145,7 +145,7 @@ const Home = () => {
                   </ul>
                   <h5 style={{ textAlign: "center" }}>
                     Te recomendamos permanecer en casa y seguir la cobertura de
-                    la boda a traves de Instagram
+                    la boda a traves de Instagram.
                   </h5>
                 </>
               }
@@ -160,8 +160,8 @@ const Home = () => {
               text={
                 <div style={{ textAlign: "center" }}>
                   <h5>
-                    Es importante también que leas el protocolo anti Covid que
-                    se llevara acabo el día de la recepción
+                    Es importante también que leas el protocolo anti Covid, que
+                    se llevara acabo el día de la recepción.
                   </h5>
                   <ScrollAnimation
                     delay={1000}

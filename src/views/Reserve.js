@@ -157,7 +157,7 @@ const Reserve = () => {
         >
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <h1 style={{ textAlign: "center" }}>
-              Favor de llenar para saber si se va a hacer o no se va a hacer
+              ¡Tu asistencia es muy importante para nosotros, por favor haznos saber!
             </h1>
           </ScrollAnimation>
         </Col>

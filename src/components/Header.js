@@ -40,9 +40,6 @@ const useStyles = createUseStyles({
   },
 });
 const Header = (props) => {
-  // const scrollToTop = () => {
-  //   scroll.scrollToTop();
-  // };
   const classes = useStyles();
   return (
     <div
@@ -60,12 +57,6 @@ const Header = (props) => {
       className={classes.background}
       bg="light"
     >
-      {/* <Navbar expand="lg" className={classes.myNav}>
-        <Navbar.Brand onClick={scrollToTop} className={classes.title}>
-          Silvana y Daniel
-        </Navbar.Brand>
-      </Navbar> */}
-
       <Navbar expand="lg" className={classes.subNav}>
         <NavLink
           activeStyle={{ fontWeight: "bold" }}
@@ -79,15 +70,6 @@ const Header = (props) => {
           to="/location"
           className={classes.links}
         >
-          {/* <Link
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={600}
-            to="veracruz"
-          >
-            Veracruz
-          </Link> */}
           Location
         </NavLink>
         <NavLink

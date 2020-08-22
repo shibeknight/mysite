@@ -176,7 +176,7 @@ const Veracruz = () => {
         >
           <h1 style={{ textAlign: "center" }}>
             Este hermoso puerto tiene muchas actividades y experiencias que
-            ofrecerte
+            ofrecerte.
           </h1>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
