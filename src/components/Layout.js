@@ -7,7 +7,7 @@ const Layout = (props) => {
   return (
     <>
       <Header />
-      <div>{children}</div>
+      <div style={{overflow: 'hidden'}}>{children}</div>
       <Footer />
     </>
   );

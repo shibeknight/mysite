@@ -67,10 +67,18 @@ const Header = (props) => {
       </Navbar> */}
 
       <Navbar expand="lg" className={classes.subNav}>
-        <NavLink to="/" className={classes.links}>
+        <NavLink
+          activeStyle={{ fontWeight: "bold" }}
+          to="/home"
+          className={classes.links}
+        >
           Home
         </NavLink>
-        <NavLink to="/location" className={classes.links}>
+        <NavLink
+          activeStyle={{ fontWeight: "bold" }}
+          to="/location"
+          className={classes.links}
+        >
           {/* <Link
             spy={true}
             smooth={true}
@@ -82,10 +90,18 @@ const Header = (props) => {
           </Link> */}
           Location
         </NavLink>
-        <NavLink to="/gifts" className={classes.links}>
+        <NavLink
+          activeStyle={{ fontWeight: "bold" }}
+          to="/gifts"
+          className={classes.links}
+        >
           Gifts
         </NavLink>
-        <NavLink to="/reserve" className={classes.links}>
+        <NavLink
+          activeStyle={{ fontWeight: "bold" }}
+          to="/reserve"
+          className={classes.links}
+        >
           RSVP
         </NavLink>
       </Navbar>

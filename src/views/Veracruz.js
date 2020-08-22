@@ -61,7 +61,7 @@ const Veracruz = () => {
           <div style={{ textAlign: "center" }}>
             <h1>Directions</h1>
             <p>Direcciones para llegar a Veracruz</p>
-            <img className={classes.myImage} alt="mapa" src={mapa} />
+            {/* <img className={classes.myImage} alt="mapa" src={mapa} /> */}
           </div>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
@@ -82,10 +82,10 @@ const Veracruz = () => {
         >
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div style={{ textAlign: "center" }}>
-              <h2>
+              <h1>
                 We provide a special price for wedding guests at the Grand
                 Fiesta Americana Veracruz
-              </h2>
+              </h1>
               <p>Link/codigo de descuento</p>
             </div>
           </ScrollAnimation>
@@ -106,10 +106,10 @@ const Veracruz = () => {
           md={12}
           lg={12}
         >
-          <h2 style={{ textAlign: "center" }}>
+          <h1 style={{ textAlign: "center" }}>
             You'll find plenty of activities and amazing food to try in
             Veracruz!
-          </h2>
+          </h1>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <ScrollAnimation

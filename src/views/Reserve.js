@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import Container from "react-bootstrap/Container";
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import ScrollAnimation from "react-animate-on-scroll";
 import Hero from "../components/Hero";
 import RsvpForm from "../components/RsvpForm";
 import heropic from "../assets/heropic7.jpeg";
@@ -14,6 +16,18 @@ const useStyles = createUseStyles({
   },
   myLabel: {
     fontWeight: "bold",
+  },
+  myCol: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  myRow: {
+    paddingTop: "4.2vh",
+    paddingRight: "20px",
+    paddingLeft: "20px",
+    marginRight: "auto",
+    marginLeft: "auto",
+    justifyContent: "center",
   },
 });
 
@@ -81,6 +95,22 @@ const Reserve = () => {
         title="RSVP"
         subtitle="Please respond by October 1, 2020"
       />
+
+      <Row className={classes.myRow}>
+        <Col
+          style={{ paddingBottom: "3vh" }}
+          className={classes.myCol}
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <h1 style={{ textAlign: "center" }}>
+              Favor de llenar para saber si se va a hacer o no se va a hacer
+            </h1>
+          </ScrollAnimation>
+        </Col>
+      </Row>
       {section}
     </Container>
   );
