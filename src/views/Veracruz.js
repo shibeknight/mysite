@@ -12,7 +12,7 @@ import ver2 from "../assets/veracruz/11.jpg";
 import ver3 from "../assets/veracruz/3.jpg";
 import hotel from "../assets/veracruz/hotel.jpg";
 import hotel2 from "../assets/veracruz/hotel2.jpg";
-import mapa from "../assets/veracruz/veracruzmapa.png";
+import documento from "../assets/documents/TARIFA ESPECIAL.pdf";
 
 const lorem =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dui et facilisis porttitor. Morbi ultrices diam vitae libero aliquet, ac luctus ante egestas. Maecenas finibus luctus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac mauris eleifend, semper libero quis, vehicula nibh. Nullam fermentum nisi eu neque placerat, sed euismod elit faucibus. Etiam placerat finibus vehicula. Duis a ex at nisl consequat dapibus quis at ligula.";
@@ -86,7 +86,11 @@ const Veracruz = () => {
                 We provide a special price for wedding guests at the Grand
                 Fiesta Americana Veracruz
               </h1>
-              <p>Link/codigo de descuento</p>
+              <h4>
+                <a href={documento} rel='noopener noreferrer' target="_blank">
+                  Documento
+                </a>
+              </h4>
             </div>
           </ScrollAnimation>
         </Col>

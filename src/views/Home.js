@@ -12,9 +12,11 @@ import sildan5 from "../assets/sildan5.jpg";
 import hero from "../assets/heropic.jpeg";
 import hero4 from "../assets/heropic4.jpeg";
 import hero3 from "../assets/heropic3.jpeg";
+import documento from "../assets/documents/Procedimiento de Operaciones de Banquetes.pdf";
 
+let texto = require("../assets/texto.json");
 const lorem =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dui et facilisis porttitor. Morbi ultrices diam vitae libero aliquet, ac luctus ante egestas. Maecenas finibus luctus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac mauris eleifend, semper libero quis, vehicula nibh. Nullam fermentum nisi eu neque placerat, sed euismod elit faucibus. Etiam placerat finibus vehicula. Duis a ex at nisl consequat dapibus quis at ligula.";
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper velit ac nibh scelerisque efficitur. Integer pretium sodales cursus. Maecenas id aliquet nunc. Phasellus vestibulum arcu sit amet mi feugiat congue. Vivamus faucibus aliquet felis eu efficitur. Nullam ac nulla sed urna porttitor laoreet id quis ante.";
 
 const useStyles = createUseStyles({
   myContainer: {
@@ -56,8 +58,8 @@ const Home = () => {
         >
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <h1 style={{ textAlign: "center" }}>
-              Please join Silvana and Daniel as we celebrate our wedding in
-              Mexico!
+              ¡Estamos muy felices al celebrar la union de nuestras vidas, Únete
+              a nuestra alegría!
             </h1>
           </ScrollAnimation>
         </Col>
@@ -67,7 +69,7 @@ const Home = () => {
             animateIn="slideInRight"
             animateOnce={true}
           >
-            <CardBasic image={sil3} title="Silvana" text={lorem} />
+            <CardBasic image={sil3} title="Silvana" text={texto.silvanaText} />
           </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
@@ -76,7 +78,7 @@ const Home = () => {
             animateIn="slideInRight"
             animateOnce={true}
           >
-            <CardBasic image={dan2} title="Daniel" text={lorem} />
+            <CardBasic image={dan2} title="Daniel" text={texto.danielText} />
           </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
@@ -85,7 +87,7 @@ const Home = () => {
             animateIn="slideInRight"
             animateOnce={true}
           >
-            <CardBasic image={sildan5} title="Us" text={lorem} />
+            <CardBasic image={sildan5} title="Us" text={texto.usText} />
           </ScrollAnimation>
         </Col>
       </Row>
@@ -100,12 +102,13 @@ const Home = () => {
         >
           <div style={{ textAlign: "center" }}>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <h2>
-                Please read the following document regarding health and safety
-                protocols to be implemented in the venue.
-              </h2>
-              <p>Documento</p>
+              <h2>Nos encantaría verte</h2>
             </ScrollAnimation>
+            {/* <h4>
+                <a href={documento} rel="noopener noreferrer" target="_blank">
+                  Documento
+                </a>
+              </h4> */}
           </div>
         </Col>
       </Row>
