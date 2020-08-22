@@ -164,7 +164,7 @@ const Home = () => {
                     se llevara acabo el día de la recepción
                   </h5>
                   <ScrollAnimation
-                    delay={1500}
+                    delay={1000}
                     animateIn="bounceIn"
                     animateOnce={true}
                   >

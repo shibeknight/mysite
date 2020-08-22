@@ -12,7 +12,10 @@ import ver2 from "../assets/veracruz/11.jpg";
 import ver3 from "../assets/veracruz/3.jpg";
 import hotel from "../assets/veracruz/hotel.jpg";
 import hotel2 from "../assets/veracruz/hotel2.jpg";
+import { AiOutlineFilePdf } from "react-icons/ai";
 import documento from "../assets/documents/TARIFA ESPECIAL.pdf";
+
+let texto = require("../assets/texto.json");
 
 const lorem =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dui et facilisis porttitor. Morbi ultrices diam vitae libero aliquet, ac luctus ante egestas. Maecenas finibus luctus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac mauris eleifend, semper libero quis, vehicula nibh. Nullam fermentum nisi eu neque placerat, sed euismod elit faucibus. Etiam placerat finibus vehicula. Duis a ex at nisl consequat dapibus quis at ligula.";
@@ -43,6 +46,15 @@ const useStyles = createUseStyles({
       width: "300px",
     },
   },
+  links: {
+    color: "rgb(69, 95, 75)",
+    textDecoration: "none",
+    verticalAlign: "middle",
+    "&:hover": {
+      color: "rgb(69, 95, 75)",
+      textDecoration: "none",
+    },
+  },
 });
 
 const Veracruz = () => {
@@ -59,16 +71,26 @@ const Veracruz = () => {
           lg={12}
         >
           <div style={{ textAlign: "center" }}>
-            <h1>Directions</h1>
-            <p>Direcciones para llegar a Veracruz</p>
-            {/* <img className={classes.myImage} alt="mapa" src={mapa} /> */}
+            <h1>Sobre Veracruz</h1>
           </div>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic align={true} title="Ceremony" text={lorem} />
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="History"
+              text={texto.veracruzText1}
+            />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic align={true} title="Ceremony" text={lorem} />
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Culture"
+              text={texto.veracruzText2}
+            />
+          </ScrollAnimation>
         </Col>
       </Row>
       <Hero image={hotel} title="Where to stay" height="60vh" />
@@ -83,22 +105,64 @@ const Veracruz = () => {
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div style={{ textAlign: "center" }}>
               <h1>
-                We provide a special price for wedding guests at the Grand
-                Fiesta Americana Veracruz
+                Tenemos un código de descuento para ti en el Hotel Fiesta
+                Americana
               </h1>
               <h4>
-                <a href={documento} rel='noopener noreferrer' target="_blank">
-                  Documento
-                </a>
+                <ScrollAnimation
+                  delay={1000}
+                  animateIn="bounceIn"
+                  animateOnce={true}
+                >
+                  <a
+                    href={documento}
+                    className={classes.links}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiOutlineFilePdf title="Documento" size="3rem" />
+                    <h6>Descargar</h6>
+                  </a>
+                </ScrollAnimation>
               </h4>
             </div>
           </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic align={true} title="Hotel Info" text={lorem} />
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Grand Fiesta Americana"
+              text="Su ubicación es perfecta para gozar del Puerto. Accesibilidad al aeropuerto, a importantes centros comerciales y al World Trade Center. En su interior: majestuosas albercas, Sabores de México, Spa y espacios esculturales."
+            />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic align={true} title="Hotel Directions" text={lorem} />
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Otras opciones"
+              text={
+                <div>
+                  <h5 style={{ textAlign: "center" }}>
+                    Te recomendamos las siguientes alternativas de alojamiento:
+                  </h5>
+                  <ul
+                    style={{
+                      listStyleType: "none",
+                      textAlign: "center",
+                      paddingInlineStart: "inherit",
+                    }}
+                  >
+                    <li>Hotel Rivoli </li>
+                    <li>Hotel Camino Real</li>
+                    <li>Hotel Indigo</li>
+                    <li>Hotel Gran Plaza</li>
+                  </ul>
+                </div>
+              }
+            />
+          </ScrollAnimation>
         </Col>
       </Row>
       <Hero image={hotel2} title="What to do" height="60vh" />
@@ -111,8 +175,8 @@ const Veracruz = () => {
           lg={12}
         >
           <h1 style={{ textAlign: "center" }}>
-            You'll find plenty of activities and amazing food to try in
-            Veracruz!
+            Este hermoso puerto tiene muchas actividades y experiencias que
+            ofrecerte
           </h1>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
@@ -126,7 +190,7 @@ const Veracruz = () => {
               mheight="200px"
               image={ver1}
               title="Visit"
-              text={lorem}
+              text={texto.veracruzVisit}
             />
           </ScrollAnimation>
         </Col>
@@ -139,9 +203,9 @@ const Veracruz = () => {
             <CardBasic
               height="300px"
               mheight="200px"
-              image={ver2}
+              image={ver3}
               title="Explore"
-              text={lorem}
+              text={texto.veracruzExplore}
             />
           </ScrollAnimation>
         </Col>
@@ -154,9 +218,9 @@ const Veracruz = () => {
             <CardBasic
               height="300px"
               mheight="200px"
-              image={ver3}
+              image={ver2}
               title="Enjoy"
-              text={lorem}
+              text={texto.veracruzEnjoy}
             />
           </ScrollAnimation>
         </Col>

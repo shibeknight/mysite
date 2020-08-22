@@ -7,6 +7,8 @@ import Hero from "../components/Hero";
 import ScrollAnimation from "react-animate-on-scroll";
 import heropic from "../assets/heropic5.jpeg";
 
+let texto = require("../assets/texto.json");
+
 const useStyles = createUseStyles({
   myContainer: {
     padding: "0",
@@ -25,6 +27,14 @@ const useStyles = createUseStyles({
     marginLeft: "auto",
     display: "flex",
     justifyContent: "center",
+  },
+  myText: {
+    fontSize: "",
+  },
+  "@media (max-width: 727px)": {
+    myText: {
+      fontSize: "1.5rem",
+    },
   },
 });
 
@@ -48,15 +58,14 @@ const Gifts = () => {
           lg={8}
         >
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <h2 style={{ textAlign: "center" }}>
-              <span>
-                You don't have to bring us gifts, our home is now far from
-                Veracruz and we can't take much with us.&nbsp;
-              </span>
-              <span>
-                If you want to give us something, a contribution to our
-                honeymoon fund and future plans as a family would be great!
-              </span>
+            <h1 className={classes.myText} style={{ textAlign: "center" }}>
+              {texto.giftsText}
+            </h1>
+            <h2 className={classes.myText} style={{ textAlign: "center" }}>
+              ¡Gracias por ser parte de nuestra historia!
+            </h2>
+            <h2 className={classes.myText} style={{ textAlign: "center" }}>
+              Daniel y Silvana
             </h2>
           </ScrollAnimation>
         </Col>
