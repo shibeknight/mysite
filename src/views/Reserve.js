@@ -3,6 +3,9 @@ import { createUseStyles } from "react-jss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
+import Alert from "react-bootstrap/Alert";
 import ScrollAnimation from "react-animate-on-scroll";
 import Hero from "../components/Hero";
 import RsvpForm from "../components/RsvpForm";
@@ -20,6 +23,12 @@ const useStyles = createUseStyles({
   myCol: {
     display: "flex",
     justifyContent: "center",
+  },
+  spinCol: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "300px",
   },
   myRow: {
     paddingTop: "4.2vh",
@@ -42,6 +51,7 @@ const Reserve = () => {
   });
   const [loading, setisloading] = useState(false);
   const [success, setsuccess] = useState(false);
+  const [validated, setvalidated] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -49,10 +59,21 @@ const Reserve = () => {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
-    const templateId = "template_5NPOxG7q";
-    // sendFeedback(templateId, info);
-    console.log("The result is ", info);
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+      setvalidated(true);
+    } else if (info.fname === "" || info.lname === "") {
+      setvalidated(false);
+    } else {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("validated and data is there");
+      const templateId = "template_5NPOxG7q";
+      sendFeedback(templateId, info);
+      // console.log("The result is ", info);
+    }
   }
 
   function sendFeedback(templateId, variables) {
@@ -61,7 +82,7 @@ const Reserve = () => {
     window.emailjs
       .send("gmail", templateId, variables)
       .then((res) => {
-        setisloading(false);
+        setTimeout(setisloading(false), 1500);
         setsuccess(true);
         console.log("Success!", res);
       })
@@ -71,9 +92,38 @@ const Reserve = () => {
   let section;
 
   if (loading) {
-    section = <div>Loading...</div>;
+    section = (
+      <Col className={classes.spinCol}>
+        <Button
+          size="lg"
+          style={{ height: "fit-content" }}
+          variant="success"
+          disabled
+        >
+          <Spinner
+            as="span"
+            animation="border"
+            size="sm"
+            role="status"
+            aria-hidden="true"
+            style={{ marginRight: "5px" }}
+          />
+          Enviando...
+        </Button>
+      </Col>
+    );
   } else if (success) {
-    section = <div>Success!</div>;
+    section = (
+      <Col className={classes.spinCol}>
+        <Alert variant="success" style={{ backgroundColor: "#d5e8de" }}>
+          <Alert.Heading>Gracias por confirmar!</Alert.Heading>
+          <p>
+            Si agregaste tu correo en el formulario, recibiras pronto un mensaje
+            con tu confirmacion!
+          </p>
+        </Alert>
+      </Col>
+    );
   } else {
     section = (
       <RsvpForm
@@ -84,6 +134,7 @@ const Reserve = () => {
         message={info.message}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        validated={validated}
       />
     );
   }

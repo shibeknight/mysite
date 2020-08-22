@@ -30,10 +30,10 @@ const useStyles = createUseStyles({
 const RsvpForm = (props) => {
   const classes = useStyles();
   return (
-    <Form>
+    <Form onSubmit={props.handleSubmit} noValidate validated={props.validated}>
       <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
         <Row className={classes.myRow}>
-          <Col xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
+          <Form.Group as={Col} xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
             <Form.Label className={classes.myLabel}>Email address</Form.Label>
             <Form.Control
               onChange={props.handleChange}
@@ -42,24 +42,28 @@ const RsvpForm = (props) => {
               type="email"
               placeholder="someone@mail.com"
             />
-          </Col>
+          </Form.Group>
           <Col xs={12} sm={12} md={6} lg={6} className={classes.myCol}>
             <Form.Control
+              required
               onChange={props.handleChange}
               name="fname"
               value={props.fname}
               type="input"
               placeholder="First name"
             />
+            <Form.Control.Feedback type='invalid'>Por favor agrega tu nombre</Form.Control.Feedback>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6} className={classes.myCol}>
             <Form.Control
+              required
               onChange={props.handleChange}
               name="lname"
               value={props.lname}
               type="input"
               placeholder="Last name"
             />
+            <Form.Control.Feedback type='invalid'>Por favor agrega tu apellido</Form.Control.Feedback>
           </Col>
           <Col xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
             <Form.Label
@@ -69,6 +73,7 @@ const RsvpForm = (props) => {
               Will you be there?
             </Form.Label>
             <Form.Control
+              required
               onChange={props.handleChange}
               name="going"
               value={props.going}
@@ -99,7 +104,7 @@ const RsvpForm = (props) => {
             <Button
               style={{ fontWeight: "bold", width: "40%" }}
               variant="outline-success"
-              onClick={props.handleSubmit}
+              type="submit"
             >
               Submit
             </Button>
