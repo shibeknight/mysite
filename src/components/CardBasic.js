@@ -41,7 +41,7 @@ const CardBasic = (props) => {
         >
           {props.title}
         </Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>{props.text}</Card.Text>
+        <Card.Text as='div' style={{ textAlign: "justify" }}>{props.text}</Card.Text>
       </Card.Body>
     </Card>
   );

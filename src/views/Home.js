@@ -13,10 +13,9 @@ import hero from "../assets/heropic.jpeg";
 import hero4 from "../assets/heropic4.jpeg";
 import hero3 from "../assets/heropic3.jpeg";
 import documento from "../assets/documents/Procedimiento de Operaciones de Banquetes.pdf";
+import { AiOutlineFilePdf } from "react-icons/ai";
 
 let texto = require("../assets/texto.json");
-const lorem =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper velit ac nibh scelerisque efficitur. Integer pretium sodales cursus. Maecenas id aliquet nunc. Phasellus vestibulum arcu sit amet mi feugiat congue. Vivamus faucibus aliquet felis eu efficitur. Nullam ac nulla sed urna porttitor laoreet id quis ante.";
 
 const useStyles = createUseStyles({
   myContainer: {
@@ -36,6 +35,18 @@ const useStyles = createUseStyles({
     marginLeft: "auto",
     justifyContent: "center",
   },
+  links: {
+    color: "rgb(69, 95, 75)",
+    textDecoration: "none",
+    verticalAlign: "middle",
+    "&:hover": {
+      color: "rgb(69, 95, 75)",
+      textDecoration: "none",
+    },
+  },
+  mySpan: {
+    display: "block",
+  },
 });
 
 const Home = () => {
@@ -53,6 +64,7 @@ const Home = () => {
           style={{ paddingBottom: "3vh" }}
           className={classes.myCol}
           xs={12}
+          sm={12}
           md={12}
           lg={12}
         >
@@ -63,7 +75,7 @@ const Home = () => {
             </h1>
           </ScrollAnimation>
         </Col>
-        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+        <Col className={classes.myCol} xs={12} sm={12} md={4} lg={4}>
           <ScrollAnimation
             delay={500}
             animateIn="slideInRight"
@@ -72,7 +84,7 @@ const Home = () => {
             <CardBasic image={sil3} title="Silvana" text={texto.silvanaText} />
           </ScrollAnimation>
         </Col>
-        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+        <Col className={classes.myCol} xs={12} sm={12} md={4} lg={4}>
           <ScrollAnimation
             delay={1000}
             animateIn="slideInRight"
@@ -81,7 +93,7 @@ const Home = () => {
             <CardBasic image={dan2} title="Daniel" text={texto.danielText} />
           </ScrollAnimation>
         </Col>
-        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+        <Col className={classes.myCol} xs={12} sm={12} md={4} lg={4}>
           <ScrollAnimation
             delay={1500}
             animateIn="slideInRight"
@@ -97,28 +109,120 @@ const Home = () => {
           style={{ paddingBottom: "3vh" }}
           className={classes.myCol}
           xs={12}
+          sm={12}
           md={12}
           lg={12}
         >
           <div style={{ textAlign: "center" }}>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <h2>Nos encantaría verte</h2>
+              <h1>
+                Nos encantaría verte! Por ello, tenemos las siguientes
+                recomendaciones para ti durante el evento.
+              </h1>
             </ScrollAnimation>
-            {/* <h4>
-                <a href={documento} rel="noopener noreferrer" target="_blank">
-                  Documento
-                </a>
-              </h4> */}
           </div>
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Recomendaciones"
+              text={
+                <>
+                  <h5 style={{ textAlign: "center" }}>
+                    Si haz presentado malestares como:
+                  </h5>
+                  <ul
+                    style={{
+                      listStyleType: "none",
+                      textAlign: "center",
+                      paddingInlineStart: "inherit",
+                    }}
+                  >
+                    <li>Tos</li>
+                    <li>Fiebre</li>
+                    <li>Ausencia de aire</li>
+                  </ul>
+                  <h5 style={{ textAlign: "center" }}>
+                    Te recomendamos permanecer en casa y seguir la cobertura de
+                    la boda a traves de Instagram
+                  </h5>
+                </>
+              }
+            />
+          </ScrollAnimation>
+        </Col>
+        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Protocolo"
+              text={
+                <div style={{ textAlign: "center" }}>
+                  <h5>
+                    Es importante también que leas el protocolo anti Covid que
+                    se llevara acabo el día de la recepción
+                  </h5>
+                  <ScrollAnimation
+                    delay={1500}
+                    animateIn="bounceIn"
+                    animateOnce={true}
+                  >
+                    <a
+                      href={documento}
+                      className={classes.links}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiOutlineFilePdf title="Documento" size="3rem" />
+                      <h6>Descargar</h6>
+                    </a>
+                  </ScrollAnimation>
+                </div>
+              }
+            />
+          </ScrollAnimation>
         </Col>
       </Row>
       <Hero title="Wedding Day" height="70vh" image={hero4} />
       <Row className={classes.myRow}>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic align={true} title="Ceremony" text={lorem} />
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Ceremony"
+              text={
+                <div style={{ textAlign: "center" }}>
+                  <span className={classes.mySpan}>Catedral de Veracruz</span>
+                  <span className={classes.mySpan}>
+                    Mario Molina 173, Centro, 91700
+                  </span>
+                  <span className={classes.mySpan}>Veracruz, Ver.</span>
+                  <span className={classes.mySpan}>12:00 pm</span>
+                </div>
+              }
+            />
+          </ScrollAnimation>
         </Col>
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
-          <CardBasic align={true} title="Reception" text={lorem} />
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            <CardBasic
+              align={true}
+              title="Reception"
+              text={
+                <div style={{ textAlign: "center" }}>
+                  <span className={classes.mySpan}>
+                    Hotel Fiesta Americana - Salon Costa de Oro{" "}
+                  </span>
+                  <span className={classes.mySpan}>
+                    Prol, Blvd. Manuel Ávila Camacho s/n, Costa de Oro, 94299
+                  </span>
+                  <span className={classes.mySpan}>Boca del Río, Ver.</span>
+                  <span className={classes.mySpan}>4:00 pm</span>
+                </div>
+              }
+            />
+          </ScrollAnimation>
         </Col>
       </Row>
     </Container>

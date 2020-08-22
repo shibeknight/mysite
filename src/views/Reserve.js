@@ -51,7 +51,7 @@ const Reserve = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const templateId = "template_5NPOxG7q";
-    sendFeedback(templateId, info);
+    // sendFeedback(templateId, info);
     console.log("The result is ", info);
   }
 
