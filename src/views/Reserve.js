@@ -69,7 +69,6 @@ const Reserve = () => {
     } else {
       e.preventDefault();
       e.stopPropagation();
-      console.log("validated and data is there");
       const templateId = "template_5NPOxG7q";
       sendFeedback(templateId, info);
       // console.log("The result is ", info);
@@ -77,14 +76,12 @@ const Reserve = () => {
   }
 
   function sendFeedback(templateId, variables) {
-    console.log(variables);
     setisloading(true);
     window.emailjs
       .send("gmail", templateId, variables)
       .then((res) => {
         setTimeout(setisloading(false), 1500);
         setsuccess(true);
-        console.log("Success!", res);
       })
       .catch((err) => console.log(err));
   }
@@ -157,7 +154,8 @@ const Reserve = () => {
         >
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <h1 style={{ textAlign: "center" }}>
-              ¡Tu asistencia es muy importante para nosotros, por favor haznos saber!
+              ¡Tu asistencia es muy importante para nosotros, por favor haznos
+              saber!
             </h1>
           </ScrollAnimation>
         </Col>

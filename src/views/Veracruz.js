@@ -17,9 +17,6 @@ import documento from "../assets/documents/TARIFA ESPECIAL.pdf";
 
 let texto = require("../assets/texto.json");
 
-const lorem =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dui et facilisis porttitor. Morbi ultrices diam vitae libero aliquet, ac luctus ante egestas. Maecenas finibus luctus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac mauris eleifend, semper libero quis, vehicula nibh. Nullam fermentum nisi eu neque placerat, sed euismod elit faucibus. Etiam placerat finibus vehicula. Duis a ex at nisl consequat dapibus quis at ligula.";
-
 const useStyles = createUseStyles({
   myContainer: {
     padding: "0",

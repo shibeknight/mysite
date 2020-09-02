@@ -34,7 +34,7 @@ const RsvpForm = (props) => {
       <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
         <Row className={classes.myRow}>
           <Form.Group as={Col} xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
-            <Form.Label className={classes.myLabel}>Email address</Form.Label>
+            <Form.Label className={classes.myLabel}>Email(optional)</Form.Label>
             <Form.Control
               onChange={props.handleChange}
               name="email"
@@ -50,7 +50,7 @@ const RsvpForm = (props) => {
               name="fname"
               value={props.fname}
               type="input"
-              placeholder="First name"
+              placeholder="Nombre"
             />
             <Form.Control.Feedback type='invalid'>Por favor agrega tu nombre</Form.Control.Feedback>
           </Col>
@@ -61,7 +61,7 @@ const RsvpForm = (props) => {
               name="lname"
               value={props.lname}
               type="input"
-              placeholder="Last name"
+              placeholder="Apellido"
             />
             <Form.Control.Feedback type='invalid'>Por favor agrega tu apellido</Form.Control.Feedback>
           </Col>
@@ -70,7 +70,7 @@ const RsvpForm = (props) => {
               onChange={props.handleChange}
               className={classes.myLabel}
             >
-              Will you be there?
+              Will you be there?/Contaremos contigo?
             </Form.Label>
             <Form.Control
               required
@@ -79,12 +79,12 @@ const RsvpForm = (props) => {
               value={props.going}
               as="select"
             >
-              <option>Yes</option>
+              <option>Si</option>
               <option>No</option>
             </Form.Control>
           </Col>
           <Col xs={12} sm={12} md={12} lg={12} className={classes.myCol}>
-            <Form.Label className={classes.myLabel}>Message</Form.Label>
+            <Form.Label className={classes.myLabel}>Mensaje</Form.Label>
             <Form.Control
               onChange={props.handleChange}
               name="message"
@@ -106,7 +106,7 @@ const RsvpForm = (props) => {
               variant="outline-success"
               type="submit"
             >
-              Submit
+              Enviar
             </Button>
           </Col>
         </Row>
