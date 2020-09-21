@@ -141,7 +141,7 @@ const Reserve = () => {
       <Hero
         image={heropic}
         title="RSVP"
-        subtitle="Please respond by October 1, 2020"
+        subtitle="Please respond by October 15, 2020"
       />
 
       <Row className={classes.myRow}>
