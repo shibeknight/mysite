@@ -14,6 +14,7 @@ import hero4 from "../assets/heropic4.jpeg";
 import hero3 from "../assets/heropic3.jpeg";
 import documento from "../assets/documents/Procedimiento de Operaciones de Banquetes.pdf";
 import { AiOutlineFilePdf } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 let texto = require("../assets/texto.json");
 
@@ -147,6 +148,18 @@ const Home = () => {
                     Te recomendamos permanecer en casa y seguir la cobertura de
                     la boda a traves de Instagram.
                   </h5>
+                  <div style={{ textAlign: "center" }}>
+                    <a
+                      href="https://www.instagram.com/silvanaydanielceballos/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiOutlineInstagram
+                        className={classes.links}
+                        size="2.5em"
+                      />
+                    </a>
+                  </div>
                 </>
               }
             />
