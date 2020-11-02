@@ -102,10 +102,9 @@ const Veracruz = () => {
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div style={{ textAlign: "center" }}>
               <h1>
-                Tenemos un código de descuento para ti en el Hotel Fiesta
-                Americana
+                Tenemos algunas opciones de hospedaje que te pueden interesar:
               </h1>
-              <h4>
+              {/* <h4>
                 <ScrollAnimation
                   delay={1000}
                   animateIn="bounceIn"
@@ -121,11 +120,11 @@ const Veracruz = () => {
                     <h6>Descargar</h6>
                   </a>
                 </ScrollAnimation>
-              </h4>
+              </h4> */}
             </div>
           </ScrollAnimation>
         </Col>
-        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+        {/* <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
             <CardBasic
               align={true}
@@ -133,16 +132,16 @@ const Veracruz = () => {
               text="Su ubicación es perfecta para gozar del Puerto. Accesibilidad al aeropuerto, a importantes centros comerciales y al World Trade Center. En su interior: majestuosas albercas, Sabores de México, Spa y espacios esculturales."
             />
           </ScrollAnimation>
-        </Col>
+        </Col> */}
         <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
             <CardBasic
               align={true}
-              title="Otras opciones"
+              title="Alojamiento"
               text={
                 <div>
                   <h5 style={{ textAlign: "center" }}>
-                    Te recomendamos las siguientes alternativas de alojamiento:
+                    Te recomendamos las siguientes opciones:
                   </h5>
                   <ul
                     style={{

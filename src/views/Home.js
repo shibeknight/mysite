@@ -204,7 +204,7 @@ const Home = () => {
             />
           </ScrollAnimation>
         </Col>
-        <Col className={classes.myCol} xs={12} md={4} lg={4}>
+        {/* <Col className={classes.myCol} xs={12} md={4} lg={4}>
           <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
             <CardBasic
               align={true}
@@ -223,7 +223,7 @@ const Home = () => {
               }
             />
           </ScrollAnimation>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );
