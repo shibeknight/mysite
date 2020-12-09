@@ -81,10 +81,10 @@ const Header = (props) => {
         </NavLink>
         <NavLink
           activeStyle={{ fontWeight: "bold" }}
-          to="/reserve"
+          to="/insta"
           className={classes.links}
         >
-          RSVP
+          Memories
         </NavLink>
       </Navbar>
     </div>
