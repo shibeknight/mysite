@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import { createUseStyles } from "react-jss";
-import flowerbg from "../assets/89210.jpg";
+import flowerbg from "../assets/89210.jpeg";
 
 const useStyles = createUseStyles({
   subNav: {
