@@ -6,14 +6,12 @@ import Container from "react-bootstrap/Container";
 import Hero from "../components/Hero";
 import CardBasic from "../components/CardBasic";
 import ScrollAnimation from "react-animate-on-scroll";
-import veracruz from "../assets/veracruz/9.JPG";
-import ver1 from "../assets/veracruz/12.jpg";
-import ver2 from "../assets/veracruz/11.jpg";
-import ver3 from "../assets/veracruz/3.jpg";
-import hotel from "../assets/veracruz/hotel.jpg";
-import hotel2 from "../assets/veracruz/hotel2.jpg";
-import { AiOutlineFilePdf } from "react-icons/ai";
-import documento from "../assets/documents/TARIFA ESPECIAL.pdf";
+import veracruz from "../assets/veracruz/9.jpeg";
+import ver1 from "../assets/veracruz/12.jpeg";
+import ver2 from "../assets/veracruz/11.jpeg";
+import ver3 from "../assets/veracruz/3.jpeg";
+import hotel from "../assets/veracruz/hotel.jpeg";
+import hotel2 from "../assets/veracruz/hotel2.jpeg";
 
 let texto = require("../assets/texto.json");
 
